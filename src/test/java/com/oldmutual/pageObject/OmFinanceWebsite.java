@@ -20,8 +20,10 @@ public class OmFinanceWebsite {
 		
 	}
 	
+	
+	//@FindBy(className="om-button-text")
 	//page elements (Personal loan = learn more button)
-	@FindBy(className="om-button-text")
+	@FindBy(xpath="(//span[@class='om-button-text'])[2]")
 	WebElement loanBtn;
 	
 	//getting the title of the page
@@ -41,7 +43,7 @@ public class OmFinanceWebsite {
 		
 		//To reach the loan button, scroll down
 		JavascriptExecutor js = (JavascriptExecutor) homePageDriver;
-		js.executeScript("window.scrollBy(0,850)", "");
+		js.executeScript("window.scrollBy(0,900)", "");
 	}
 	
 }

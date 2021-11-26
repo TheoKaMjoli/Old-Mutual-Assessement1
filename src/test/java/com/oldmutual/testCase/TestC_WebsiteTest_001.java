@@ -34,7 +34,7 @@ public class TestC_WebsiteTest_001 extends BaseClass {
 		}
 		
 		
-		omFinanceWebsite.scrollDown();
+	//	omFinanceWebsite.scrollDown();
 		omFinanceWebsite.clickButton();
 		
 	}
