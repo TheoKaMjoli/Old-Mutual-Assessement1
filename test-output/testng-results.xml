@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2021-11-26T02:58:06 SAST" name="Default suite" finished-at="2021-11-26T02:58:19 SAST" duration-ms="12678">
+    <groups>
+    </groups>
+    <test started-at="2021-11-26T02:58:06 SAST" name="Default test" finished-at="2021-11-26T02:58:19 SAST" duration-ms="12678">
+      <class name="com.oldmutual.testCase.TestC_WebsiteTest_001">
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.oldmutual.testCase.TestC_WebsiteTest_001@76508ed1]" started-at="2021-11-26T02:58:06 SAST" name="setup" finished-at="2021-11-26T02:58:11 SAST" duration-ms="4875" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="browseToFinancePageTest()[pri:0, instance:com.oldmutual.testCase.TestC_WebsiteTest_001@76508ed1]" started-at="2021-11-26T02:58:11 SAST" name="browseToFinancePageTest" finished-at="2021-11-26T02:58:19 SAST" duration-ms="7735" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- browseToFinancePageTest -->
+      </class> <!-- com.oldmutual.testCase.TestC_WebsiteTest_001 -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

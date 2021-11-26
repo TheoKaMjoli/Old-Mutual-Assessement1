@@ -1,5 +1,6 @@
 package com.oldmutual.testBase;
 
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterClass;
@@ -11,13 +12,15 @@ public class BaseClass {
 	private String Url = "https://www.oldmutualfinance.co.za/"; //setting the modifier on private to avoid interference.
 	
 	
-	// Intitialize webdriver 
+	// Initialize webDriver 
 	public static WebDriver driver;
 	
 	//getting the homeUrl
 	public void getHomeUrl() {
 		
 		driver.get(Url);
+		
+		driver.manage().window().maximize(); //simply maximizing the window
 		
 	}
 	
@@ -30,16 +33,18 @@ public class BaseClass {
 		
 		//instantiating/creating the driver object.
 		driver = new ChromeDriver();
-		
+	
 	}
 	
+
+	
 	//shutdown after the @test. This will run after all the tests have executed
-	@AfterClass 
+	/*@AfterClass 
 	public void closeBrowser() {
 		
 		driver.quit();
 		
-	}
+	}*/
 	
 	
 	
