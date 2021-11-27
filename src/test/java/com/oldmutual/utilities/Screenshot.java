@@ -1,5 +1,5 @@
 package com.oldmutual.utilities;
 
-public class ReadConfig {
+public class Screenshot {
 
 }

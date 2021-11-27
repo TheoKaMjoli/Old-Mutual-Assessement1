@@ -43,7 +43,7 @@ public class OmFinanceWebsite {
 		
 		//To reach the loan button, scroll down
 		JavascriptExecutor js = (JavascriptExecutor) homePageDriver;
-		js.executeScript("window.scrollBy(0,900)", "");
+		js.executeScript("window.scrollBy(0,850)", "");
 	}
 	
 }
