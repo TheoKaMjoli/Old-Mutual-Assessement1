@@ -4,7 +4,7 @@ Building an Automated Test Framework with test scripts.
 
 
 ### Maven Dependenci
-```
+```java
 	<dependency>
 	    <groupId>org.testng</groupId>
 	    <artifactId>testng</artifactId>
