@@ -1,5 +1,15 @@
 # Old-Mutual-Assessement1
 Building an Automated Test Framework with test scripts.
+The goal is to evaluate and verify that a software product or application does what it is supposed to do.
+
+***********************************
+##Technologies
+* Eclipse: IDE developed using Java.
+* TestNG: It provides powerful features and reporting.
+* Maven
+
+***Reference:
+	[TestNG Doc]https://testng.org/doc/
 ## The project has been created on Maven 
 
 
