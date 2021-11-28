@@ -91,10 +91,14 @@ public class Home {
 }
 
 ```
+
+*************************************************************************************************
 #### OmFinanceWebsite Class
 
 	* The objective is to creating the driver reference.
-	* Create a constructor that accepts one parameter which is a WebDriver class, inside this constuctor we initialize web elements which are defined in page objects using 	``PageFactory.initElements(localDriver, this)`` 
+	* Create a constructor that accepts one parameter which is a WebDriver class, inside this constuctor we initialize web elements 
+which are defined in page objects using ``PageFactory.initElements(localDriver, this)`` 
+	*
 ```java
 	package com.oldmutual.pageObject;
 
@@ -132,22 +136,20 @@ public class OmFinanceWebsite {
 		 loanBtn.click();
 		
 	}
-	
-	public void scrollDown() {
-		
-		//To reach the loan button, scroll down
-		JavascriptExecutor js = (JavascriptExecutor) homePageDriver;
-		js.executeScript("window.scrollBy(0,850)", "");
-	}
-	
+
 }
 ```
+*************************************************************************************************
+#### PersonalLoan Class 
+* This class holds the ``elements`` as well as ``Methods`` which will be used on the test case class: ``public class TestC_WebsiteTest_001 ``
+* 
 
+*************************************************************************************************
 #### Implimenting POM
 
 
 
-
+*************************************************************************************************
 
 
 
