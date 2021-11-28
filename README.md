@@ -64,7 +64,7 @@ public void getHomeUrl() {
 	}	
 ```
 
-
+	* The method below will be the last to get executed. the purpose is to quit the browser or close once th test script completes execution. The annnotation is used to signal that the 
 ```java 
 	@AfterClass 
 	public void closeBrowser() {
@@ -78,6 +78,70 @@ public void getHomeUrl() {
 ## Design Pattern Used: 
 ### Page Object Model
 * The advantage of the model is that it reduces code duplication and improves test maintenance.
+
+#### Home Class
+
+* The purpose of this class is to return the expected title of the page to be validated with the actual title of the page within the test case class: ``TestC_WebsiteTest_001``
+```java
+
+package com.oldmutual.pageObject;
+public class Home {
+	// getting the title of Old Mutual Finance Web site
+	public String getTitle() { return "Bank and Borrow Solutions | Old Mutual"; }
+}
+
+```
+#### OmFinanceWebsite
+
+```java
+	package com.oldmutual.pageObject;
+
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+
+public class OmFinanceWebsite {
+	
+	//Creating the driver reference
+	WebDriver homePageDriver;
+	
+	
+	//Constructor with one parameter, takes in the driver object
+	public OmFinanceWebsite (WebDriver localDriver ){
+		
+		homePageDriver = localDriver; //instantiating homeDriver
+		PageFactory.initElements(localDriver, this); //initialize web elements which are defined in Page Objects.
+		
+	}
+	
+	//page elements (Personal loan = learn more button)
+	@FindBy(className="om-button-text")
+	WebElement loanBtn;
+	
+	//getting the title of the page
+	public String getTitle() {
+		
+		return homePageDriver.getTitle();
+		
+	}
+	
+	public void clickButton() {
+		
+		 loanBtn.click();
+		
+	}
+	
+	public void scrollDown() {
+		
+		//To reach the loan button, scroll down
+		JavascriptExecutor js = (JavascriptExecutor) homePageDriver;
+		js.executeScript("window.scrollBy(0,850)", "");
+	}
+	
+}
+```
 
 #### Implimenting POM
 
