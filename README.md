@@ -91,8 +91,10 @@ public class Home {
 }
 
 ```
-#### OmFinanceWebsite
+#### OmFinanceWebsite Class
 
+	* The objective is to creating the driver reference.
+	* Create a constructor that accepts one parameter which is a WebDriver class, inside this constuctor we initialize web elements which are defined in page objects using 	``PageFactory.initElements(localDriver, this)`` 
 ```java
 	package com.oldmutual.pageObject;
 
@@ -104,10 +106,8 @@ import org.openqa.selenium.support.PageFactory;
 
 public class OmFinanceWebsite {
 	
-	//Creating the driver reference
+
 	WebDriver homePageDriver;
-	
-	
 	//Constructor with one parameter, takes in the driver object
 	public OmFinanceWebsite (WebDriver localDriver ){
 		
