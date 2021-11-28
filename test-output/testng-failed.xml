@@ -5,6 +5,7 @@
     <classes>
       <class name="com.oldmutual.testCase.TestC_WebsiteTest_001">
         <methods>
+          <include name="closeBrowser"/>
           <include name="browseToFinancePageTest"/>
           <include name="setup"/>
         </methods>

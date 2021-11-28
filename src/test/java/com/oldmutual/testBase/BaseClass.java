@@ -11,7 +11,7 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 //We will be including our common requirements which will be used globally 
 public class BaseClass {
 	
-	private String baseUrl = "https://www.oldmutual.co.za/personal/solutions/bank-and-borrow/"; //setting the modifier on private to avoid interference.
+	private String baseUrl = "https://www.oldmutual.co.za/personal/solutions/bank-and-borrow/"; //setting the modifier on private to avoid interference by other classes.
 	
 	
 	// Initialize webDriver 
@@ -26,13 +26,13 @@ public class BaseClass {
 	}
 
 	//This is my setup method
-		@BeforeClass //This will be executed before every @test annotated method.
+		@BeforeClass //This will be executed before any @test annotated method.
 		public void setup() {
 			try {
 				//Sets the system property indicated by the specified key
-				//System.setProperty("webdriver.chrome.driver", ".\\Driver\\chromedriver.exe");
-				driver = new ChromeDriver(); //instantiating/creating the driver object.
+				//I replaced: System.setProperty("webdriver.chrome.driver", ".\\Driver\\chromedriver.exe");
 				WebDriverManager.chromedriver().setup(); //removed the external jars 
+				driver = new ChromeDriver(); //instantiating/creating the driver object.
 			}
 			catch(Exception e){
 				throw(e);
@@ -40,7 +40,7 @@ public class BaseClass {
 		
 		}
 		
-		//navigating to the personal loan paage
+		//navigating to the personal loan page
 		public void navigateToUrl(String url) {
 
 			driver.get(baseUrl + url);
@@ -50,12 +50,12 @@ public class BaseClass {
 
 	
 	//shutdown after the @test. This will run after all the tests have executed
-	/*@AfterClass 
+	@AfterClass 
 	public void closeBrowser() {
 		
 		driver.quit();
 		
-	}*/
+	}
 	
 	
 	

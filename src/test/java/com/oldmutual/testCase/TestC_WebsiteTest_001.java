@@ -16,7 +16,7 @@ public class TestC_WebsiteTest_001 extends BaseClass {
 		
 		getHomeUrl(); //Browse to Old Mutual Finance web site
 		
-		Home home = new Home();
+		Home home = new Home(); //Home object has one method getTitle()
 	
 		OmPersonalLoanPage OmPersonalLoanPage = new OmPersonalLoanPage(driver);
 		String titleValidation = home.getTitle(); //actual title 
@@ -41,6 +41,8 @@ public class TestC_WebsiteTest_001 extends BaseClass {
 		navigateToUrl("personal-loans/"); //concatenated the personal loan urls
 		
 		//Actions
+		
+		//Clicking 
 		OmPersonalLoanPage.clickBtnCaculate();
 		OmPersonalLoanPage.clickDdLownAmount();
 		OmPersonalLoanPage.clickDdLownAmountSelection();

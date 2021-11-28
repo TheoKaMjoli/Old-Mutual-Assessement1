@@ -26,7 +26,7 @@ public class OmFinanceWebsite {
 	@FindBy(xpath="(//span[@class='om-button-text'])[2]")
 	WebElement loanBtn;
 	
-	//getting the title of the page
+	//getting the actual title of the page
 	public String getTitle() {
 		
 		return homePageDriver.getTitle();
@@ -39,11 +39,6 @@ public class OmFinanceWebsite {
 		
 	}
 	
-	public void scrollDown() {
-		
-		//To reach the loan button, scroll down
-		JavascriptExecutor js = (JavascriptExecutor) homePageDriver;
-		js.executeScript("window.scrollBy(0,850)", "");
-	}
+
 	
 }
