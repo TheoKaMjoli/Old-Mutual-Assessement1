@@ -3,23 +3,25 @@ We will be building an Automated Test Framework with test scripts using the Tool
 
 #Technology/Framework Used: 
 *Java, 
-*TestNG, 
+*TestNG Framework, 
 *Selenium,
 *Maven
 
   * Eclipse Intergrated Development Environment 
   * Java Object Oriented Programming 
   * Maven is a powerful project management tool that is based on POM (project object model). It is used for projects build, dependency and documentation. 
-  * 
+  * TestNG Framework is supported by a variety of tools and plugins such as Eclipse and Maven.
 Reference: https://www.geeksforgeeks.org/introduction-apache-maven-build-automation-tool-java-projects/
+Reference: https://testng.org/doc/
 
 
 
 
 IDE: Eclipse Intergrated Development Enviroonment Stable release: 4.21.0 / 15 September 2021
 
-Design Pattern Used: Page Object Model
-*The advantage of the model is that it reduces code duplication and improves test maintenance.
+# Design Pattern Used: 
+## Page Object Model
+* The advantage of the model is that it reduces code duplication and improves test maintenance.
 
 Reference: https://www.guru99.com/page-object-model-pom-page-factory-in-selenium-ultimate-guide.html
 Cloning the project from github:
