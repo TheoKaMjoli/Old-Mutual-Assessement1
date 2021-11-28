@@ -38,9 +38,10 @@ Reference: https://www.guru99.com/page-object-model-pom-page-factory-in-selenium
 ### The Base Class
 * The purpose of the base class is to setup our WebDriver as well as store the page Url that we will be creating a test script for.
 * The test case class/classes will extend the Base Class to have access to the Url as well as the methods within the Base Class to avoid duplication.
+* We can extend this class in all test cases and we can call custom methods as well directly.
 
-	* The ``baseUrl`` will be kept ``private`` and used within the ``getHomeUrl``.
-	* Classes extending the ``BaseClass`` will have access to public attributes and methods within the class.
+	** The ``baseUrl`` will be kept ``private`` and used within the ``getHomeUrl``.
+	** Classes extending the ``BaseClass`` will have access to public attributes and methods within the class.
 ```java
 private String baseUrl = "https://www.oldmutual.co.za/personal/solutions/bank-and-borrow/"; 
 public static WebDriver driver;
@@ -225,8 +226,9 @@ public class OmPersonalLoanPage {
 ```
 
 *************************************************************************************************
-#### Implimenting POM
+## Test Case Class
 
+	
 
 
 *************************************************************************************************
