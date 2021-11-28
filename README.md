@@ -54,8 +54,8 @@ public void getHomeUrl() {
 }
 ```
 
-	* ``@BeforeClass``, this annotation will allow the method to be the first to be executed before any ``@Test`` annoted method.
-	* The purpose is to setup our driver 
+		* ``@BeforeClass``, this annotation will allow the method to be the first to be executed before any ``@Test`` annoted method.
+		* The purpose is to setup our driver 
 ```java
 	@BeforeClass 
 	public void setup() {
@@ -64,6 +64,15 @@ public void getHomeUrl() {
 	}	
 ```
 
+
+```java 
+	@AfterClass 
+	public void closeBrowser() {
+		
+		driver.quit();
+		
+	}
+```
 
 *************************************************************************************************
 ## Design Pattern Used: 
