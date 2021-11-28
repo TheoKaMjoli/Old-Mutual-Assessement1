@@ -33,14 +33,20 @@ Reference: https://www.guru99.com/page-object-model-pom-page-factory-in-selenium
 * The test case class/classes will extend the Base Class to have access to the Url as well as the methods within the Base Class to avoid duplication.
 
 	* The ``baseUrl`` will be kept ``private`` and used within the ``getHomeUrl``.
-	* Classes extending the ``BaseClass`` will not have to create  
+	* Classes extending the ``BaseClass`` will have access to public attributes and methods within the class.
 ```java
 private String baseUrl = "https://www.oldmutual.co.za/personal/solutions/bank-and-borrow/"; 
 public static WebDriver driver;
  ```
 	* The getHomeUrl will be used to getThe web page and maximize the window.
  
-
+```java
+public void getHomeUrl() {
+	driver.get(baseUrl);
+	driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS); 
+	driver.manage().window().maximize(); 
+}
+```
 
 
 
