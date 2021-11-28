@@ -7,17 +7,21 @@
 * Selenium,
 * Maven
 * Selenium WebDriver 
+* Docker Container 
 
-  * We used Eclipse Intergrated Development Environment to create our automation test using Java language. Eclipse Intergrated Development Enviroonment Stable release: 4.21.0 / 15 September 2021
+  * We used Eclipse Intergrated Development Environment to create our automation test using Java language. Eclipse Intergrated Development Enviroonment Stable release: 4.21.0 /     15 September 2021
 
   * Java Object Oriented Programming Language is widely used for mostly back-end development projects.
   * Maven is a powerful project management tool that is based on POM (project object model). It is used for projects build, dependency and documentation. 
   * TestNG Framework is supported by a variety of tools and plugins such as Eclipse and Maven.
+  * WebDriver/WebDriverManager
+  * Docker
   
 ##### Reference: https://www.geeksforgeeks.org/introduction-apache-maven-build-automation-tool-java-projects/
 ##### Reference: https://testng.org/doc/
 ##### Reference: Title: OCA: Oracle Certified Associate Java SE 8 Programmer I Study Guide: Exam 1Z0-808 Edition: 1 Author(s): Jeanne Boyarsky, Scott Selikoff
-
+##### Reference: https://github.com/bonigarcia/webdrivermanager
+##### refernce: https://github.com/bonigarcia/webdrivermanager
 
 *************************************************************************************************
 Reference: https://www.guru99.com/page-object-model-pom-page-factory-in-selenium-ultimate-guide.html
@@ -28,7 +32,10 @@ Reference: https://www.guru99.com/page-object-model-pom-page-factory-in-selenium
 * To enter the folder of the project ``cd Old-Mutual-Assessement1``
 
 *************************************************************************************************
-## The Base Class
+
+## Source Code
+
+### The Base Class
 * The purpose of the base class is to setup our WebDriver as well as store the page Url that we will be creating a test script for.
 * The test case class/classes will extend the Base Class to have access to the Url as well as the methods within the Base Class to avoid duplication.
 
@@ -39,7 +46,6 @@ private String baseUrl = "https://www.oldmutual.co.za/personal/solutions/bank-an
 public static WebDriver driver;
  ```
 	* The getHomeUrl will be used to getThe web page and maximize the window.
- 
 ```java
 public void getHomeUrl() {
 	driver.get(baseUrl);
@@ -48,6 +54,15 @@ public void getHomeUrl() {
 }
 ```
 
+	* ``@BeforeClass``, this annotation will allow the method to be the first to be executed before any ``@Test`` annoted method.
+	* The purpose is to setup our driver 
+```java
+	@BeforeClass 
+	public void setup() {
+		driver = new ChromeDriver();
+		WebDriverManager.chromedriver().setup();
+	}	
+```
 
 
 *************************************************************************************************
