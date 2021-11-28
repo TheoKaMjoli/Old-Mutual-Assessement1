@@ -18,13 +18,17 @@
 ##### Reference: Title: OCA: Oracle Certified Associate Java SE 8 Programmer I Study Guide: Exam 1Z0-808 Edition: 1 Author(s): Jeanne Boyarsky, Scott Selikoff
 
 
-## Design Pattern Used: 
-### Page Object Model
-* The advantage of the model is that it reduces code duplication and improves test maintenance.
-
+*************************************************************************************************
 Reference: https://www.guru99.com/page-object-model-pom-page-factory-in-selenium-ultimate-guide.html
 ### Cloning the project from github:
 * Download the project with HTTPS: https://github.com/TheoKaMjoli/Old-Mutual-Assessement1.git
 * Open CMD if using windows 10 enter: git clone https://github.com/TheoKaMjoli/Old-Mutual-Assessement1.git
 * Once the download is completed. The folder of the project can be confirmed using ``cmd: dir`` which will list the folders in that specfic directory.
 * To enter the folder of the project ``cd Old-Mutual-Assessement1``
+
+*************************************************************************************************
+## Design Pattern Used: 
+### Page Object Model
+* The advantage of the model is that it reduces code duplication and improves test maintenance.
+
+
