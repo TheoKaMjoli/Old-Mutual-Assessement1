@@ -29,6 +29,7 @@ Reference: https://www.guru99.com/page-object-model-pom-page-factory-in-selenium
 *************************************************************************************************
 ## The Base Class
 * The purpose of the base class is to setup our WebDriver as well as store the page Url that we will be creating a test script for.
+* The test case class/classes will extend the Base Class to have access to the Url as well as the methods within the Base Class to avoid duplication.
 * The getHomeUrl will be used to getThe web page and maximize the window.
 
 ```java
