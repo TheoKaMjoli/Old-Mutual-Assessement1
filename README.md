@@ -1,11 +1,12 @@
 # Old-Mutual-Assessement1
 ### We will be building an Automated Test Framework with test scripts using the Tools below.
 
-### I would like to give a short summary of the Technologies/Framework Used: 
+### I would like to give a short summary of the Technologies/Framework Used/API: 
 * Java, 
 * TestNG Framework, 
 * Selenium,
 * Maven
+* Selenium WebDriver 
 
   * We used Eclipse Intergrated Development Environment to create our automation test using Java language. Eclipse Intergrated Development Enviroonment Stable release: 4.21.0 / 15 September 2021
 
@@ -31,13 +32,13 @@ Reference: https://www.guru99.com/page-object-model-pom-page-factory-in-selenium
 * The purpose of the base class is to setup our WebDriver as well as store the page Url that we will be creating a test script for.
 * The test case class/classes will extend the Base Class to have access to the Url as well as the methods within the Base Class to avoid duplication.
 
-
-	* The getHomeUrl will be used to getThe web page and maximize the window.
+	* The ``baseUrl`` will be kept ``private`` and used within the ``getHomeUrl``.
+	* Classes extending the ``BaseClass`` will not have to create  
 ```java
 private String baseUrl = "https://www.oldmutual.co.za/personal/solutions/bank-and-borrow/"; 
 public static WebDriver driver;
  ```
- 
+	* The getHomeUrl will be used to getThe web page and maximize the window.
  
 
 
