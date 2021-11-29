@@ -15,7 +15,7 @@ public class OmPersonalLoanPage {
 			PageFactory.initElements(localDriver, this); //initialize web elements which are defined in Page Objects.
 	
 		}
-		
+
 		//click calclate button
 		private String btnCalculate(){
 			return "(//span[@class=\"om-button-icon\"])[1]";

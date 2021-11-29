@@ -20,8 +20,6 @@
     <maven.compiler.target>1.8</maven.compiler.target>
   </properties>
 
-
-
   <dependencies>
   
 	  <dependency>
@@ -38,6 +36,13 @@
 	    <version>7.4.0</version>
 	    <scope>test</scope>
 	</dependency>
+	
+	<dependency>
+        <groupId>org.testng</groupId>
+        <artifactId>reportng</artifactId>
+        <version>1.2.2</version>
+        <scope>test</scope>
+    </dependency>
 	
 	
 	<!-- https://mvnrepository.com/artifact/com.aventstack/extentreports -->
@@ -95,6 +100,9 @@
 		    <artifactId>webdrivermanager</artifactId>
 		    <version>4.4.3</version>
 		</dependency>
+		
+		
+        
   </dependencies>
 
 

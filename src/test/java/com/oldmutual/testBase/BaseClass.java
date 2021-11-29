@@ -32,6 +32,10 @@ public class BaseClass {
 	// This is my setup method
 	@BeforeClass // This will be executed before any @test annotated method.
 	public void setup() {
+		
+		driver = new ChromeDriver();
+		WebDriverManager.chromedriver().setup(); 
+	
 		try {
 
 			switch (conf.getBrowser()) {
@@ -44,11 +48,11 @@ public class BaseClass {
 					WebDriverManager.firefoxdriver().setup();
 					break;
 				default:
-				 System.out.println("log error stating that the browser type entered has not been catered for");
+				 System.out.println(conf.getbrowserSetupLogerror());
 			}
 
 		} catch (Exception e) {
-			System.out.println("Swicth statement: setting up drivers");
+			System.out.println("Swicth statement: setting up drivers"); 
 		}
 
 	}

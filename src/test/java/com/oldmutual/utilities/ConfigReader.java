@@ -13,6 +13,7 @@ public class ConfigReader {
 		try (InputStream input = new FileInputStream("src/test/java/com/oldmutual/conf/config.properties")) {
 			 prop = new Properties();
 			 prop.load(input);
+			System.out.println("prop === > " + prop);
 		} catch(IOException ex) {
 			// add catch error
 		}
