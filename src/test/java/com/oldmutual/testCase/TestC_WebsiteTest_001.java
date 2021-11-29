@@ -7,6 +7,8 @@ import com.oldmutual.pageObject.Home;
 import com.oldmutual.pageObject.OmPersonalLoanPage;
 import com.oldmutual.testBase.BaseClass;
 
+import io.github.bonigarcia.wdm.config.Config;
+
 //We extended the baseClass to 
 public class TestC_WebsiteTest_001 extends BaseClass {
 	
@@ -23,19 +25,8 @@ public class TestC_WebsiteTest_001 extends BaseClass {
 		
 		
 		//title verification 
-		if(titleValidation.equals("Bank and Borrow Solutions | Old Mutual")) {
-			
-			Assert.assertTrue(true);
-			
-		}
-		else {
-			
-			Assert.assertTrue(false);
-			
-		}
+		Assert.assertEquals(titleValidation,conf.getHomeTitle());
 		
-		
-	//	omFinanceWebsite.scrollDown();
 	//	omFinanceWebsite.clickButton(); //unable to click the link button
 		
 		navigateToUrl("personal-loans/"); //concatenated the personal loan urls
@@ -58,10 +49,4 @@ public class TestC_WebsiteTest_001 extends BaseClass {
 		
 	}
 	
-
-	
-
-	
-	
-
 }

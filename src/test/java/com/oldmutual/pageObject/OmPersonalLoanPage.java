@@ -12,7 +12,7 @@ public class OmPersonalLoanPage {
 		public OmPersonalLoanPage (WebDriver localDriver ){
 			
 			loanDriver = localDriver; //instantiating homeDriver
-			//PageFactory.initElements(localDriver, this); //initialize web elements which are defined in Page Objects.
+			PageFactory.initElements(localDriver, this); //initialize web elements which are defined in Page Objects.
 	
 		}
 		

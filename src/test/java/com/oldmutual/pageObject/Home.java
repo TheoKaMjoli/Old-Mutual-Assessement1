@@ -8,6 +8,6 @@ public class Home {
 	
 	WebDriver driver = new ChromeDriver();
 	public String getTitle() {
-		return driver.getTitle(); //"Bank and Borrow Solutions | Old Mutual";
+		return  driver.getTitle();
 	}
 }
