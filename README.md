@@ -38,9 +38,10 @@ Reference: https://www.guru99.com/page-object-model-pom-page-factory-in-selenium
 ### The Base Class
 * The purpose of the base class is to setup our WebDriver as well as store the page Url that we will be creating a test script for.
 * The test case class/classes will extend the Base Class to have access to the Url as well as the methods within the Base Class to avoid duplication.
+* We can extend this class in all test cases and we can call custom methods as well directly.
 
-	* The ``baseUrl`` will be kept ``private`` and used within the ``getHomeUrl``.
-	* Classes extending the ``BaseClass`` will have access to public attributes and methods within the class.
+	** The ``baseUrl`` will be kept ``private`` and used within the ``getHomeUrl``.
+	** Classes extending the ``BaseClass`` will have access to public attributes and methods within the class.
 ```java
 private String baseUrl = "https://www.oldmutual.co.za/personal/solutions/bank-and-borrow/"; 
 public static WebDriver driver;
@@ -142,11 +143,92 @@ public class OmFinanceWebsite {
 *************************************************************************************************
 #### PersonalLoan Class 
 * This class holds the ``elements`` as well as ``Methods`` which will be used on the test case class: ``public class TestC_WebsiteTest_001 ``
-* 
+```java
+public class OmPersonalLoanPage {
+	
+	WebDriver loanDriver;
+	
+	//Constructor with one parameter, takes in  driver 
+		public OmPersonalLoanPage (WebDriver localDriver ){
+			
+			loanDriver = localDriver; //instantiating homeDriver
+			//PageFactory.initElements(localDriver, this); //initialize web elements which are defined in Page Objects.
+	
+		}
+		
+		//click calclate button
+		private String btnCalculate(){
+			return "(//span[@class=\"om-button-icon\"])[1]";
+		}
+		
+		//How much do you need
+		 private String ddLoanAmount(){
+			 return "#loanAmount > div > div > div > om-form-dropdown-field > div > div.dark-grey-border > span.selected-value-container";
+		 }
+		 
+		 //Selecting the amount in this case R50 000 
+		 private String ddLoanAmountSelection(){
+			 return "//ul[@class=\"dropdown-options-list\"]/li[3]";
+		 }
+		 
+		 //Next button clicked
+		 private String btnNext(){
+			 return "undefined";
+		 }
+		
+		 //drop down loan term
+		 private String ddTerm(){
+			 return "(//input[@class=\"selected-value\"])[1]";
+		 }
+		 
+		 //loan term selection
+		 private String ddTermSelection(){
+			 return "//ul[@class=\"dropdown-options-list\"]/li[2]";
+		 }
+		 
+		 //monthly repayment label
+		 private String lblLoanRepayment(){
+			 return "(//h5[@class=\"no-bottom-margin no-top-margin\"]/strong)[2]";
+		 }
+		 
+		 public void clickBtnCaculate(){
+		        this.loanDriver.findElement(By.xpath(btnCalculate())).click();
+		    }
+		    public void clickDdLownAmount(){
+		        this.loanDriver.switchTo().frame("__JSBridgeIframe_1.0__");
+		        this.loanDriver.findElement(By.cssSelector(ddLoanAmount())).click();
+
+		    }
+		    public void clickDdLownAmountSelection(){
+
+		        this.loanDriver.findElement(By.xpath(ddLoanAmountSelection())).click();
+
+		    }
+		    public void clickBtnNext(){
+		        this.loanDriver.findElement(By.id(btnNext())).click();
+
+		    }
+		    public void clickDdTerm(){
+		        this.loanDriver.findElement(By.xpath(ddTerm())).click();
+
+		    }
+		    public void clickDdTermSelection(){
+		        this.loanDriver.findElement(By.xpath(ddTermSelection())).click();
+
+		    }
+		    
+		    //return the repayments amount 
+		    public String getLoanRepaymentText(){
+		       return  this.loanDriver.findElement(By.xpath(lblLoanRepayment())).getText();
+		    }	 
+}
+
+```
 
 *************************************************************************************************
-#### Implimenting POM
+## Test Case Class
 
+	
 
 
 *************************************************************************************************
