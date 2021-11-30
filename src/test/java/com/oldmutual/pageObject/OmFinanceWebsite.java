@@ -22,7 +22,7 @@ public class OmFinanceWebsite {
 	
 	//@FindBy(className="om-button-text")
 	//page elements (Personal loan = learn more button)
-	@FindBy(xpath="(//span[@class='om-button-text'])[2]")
+	@FindBy(xpath="(//span[@class='om-button-text'])[2]") 
 	WebElement loanBtn;
 	
 	//getting the actual title of the page

@@ -7,20 +7,19 @@ import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
 
 public class Screenshot {
 	
-	
-	public static void takeSnapShot(WebDriver webdriver, String fileWithPath) throws InterruptedException, IOException {
+	public void takeSnapShot(WebDriver webdriver, String fileWithPath) throws InterruptedException, IOException {
 		
-		webdriver.wait(2000); //the screenshot will try to take the snap while the page is loading
+		webdriver.wait(10000); //the screenshot will try to take the snap while the page is loading
 		TakesScreenshot screenshot = ((TakesScreenshot)webdriver);
 		File SrcFile = screenshot.getScreenshotAs(OutputType.FILE);
 		File DestFile = new File(fileWithPath);
 		FileUtils.copyFile(SrcFile, DestFile);
+		System.out.println("Taken shot");
+		
 	}
 	
-
-
 }
+ 

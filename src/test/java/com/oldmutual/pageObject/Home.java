@@ -38,7 +38,7 @@ public class Home {
 	
 	public String btnPersonalLoans() 
 	{
-		return "//a[contains(@href, 'personal-loans')]/span[text()='LEARN MORE']";
+		return "//a[contains(@href, 'personal-loans')]//span[text()='LEARN MORE']";
 	}
 	
 	private void scrollToElement(WebElement element) {
@@ -51,6 +51,8 @@ public class Home {
 		}
 		catch(Exception ex)
 		{
+			
+			System.out.println("what the fuck");
 			System.err.println(ex.getStackTrace());
 		}
 		

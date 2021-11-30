@@ -1,11 +1,14 @@
 package com.oldmutual.testCase;
 
+import java.io.IOException;
+
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import com.oldmutual.pageObject.Home;
 import com.oldmutual.pageObject.OmPersonalLoanPage;
 import com.oldmutual.testBase.BaseClass;
+import com.oldmutual.utilities.Screenshot;
 
 
 //We extended the baseClass to 
@@ -13,9 +16,13 @@ public class TestC_WebsiteTest_001 extends BaseClass {
 
 	
 	@Test 
-	public void browseToFinancePageTest() {
+	public void browseToFinancePageTest() throws InterruptedException, IOException {
+		
+
+		Screenshot captureScreen = new Screenshot();
 		
 		getHomeUrl(); //Browse to Old Mutual Finance web site
+		captureScreen.takeSnapShot(driver, "./Screenshot/OldMutual.png");
 		
 		Home home = new Home(driver); //Home object has one method getTitle()
 	

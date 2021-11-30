@@ -48,7 +48,7 @@ public class OmPersonalLoanPage {
 		 
 		 //monthly repayment label
 		 private String lblLoanRepayment(){
-			 return "(//h5[@class=\"no-bottom-margin no-top-margin\"]/strong)[2]";
+			 return "(//h5[@class=\"no-bottom-margin no-top-margin\"]/strong)[2]"; 
 		 }
 		 
 		 public void clickBtnCaculate(){

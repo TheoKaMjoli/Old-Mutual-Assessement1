@@ -3,6 +3,8 @@ import com.oldmutual.utilities.ConfigReader;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
+import java.util.concurrent.TimeUnit;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
@@ -61,6 +63,9 @@ public class BaseClass {
 	public void navigateToUrl(String url) {
 
 		driver.get(baseUrl + url);
+		driver.manage().window().maximize(); // simply maximizing the window
+		driver.manage().timeouts().implicitlyWait(500, TimeUnit.SECONDS);
+
 
 	}
 
