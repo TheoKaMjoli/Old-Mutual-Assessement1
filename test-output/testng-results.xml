@@ -2,16 +2,16 @@
 <testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2021-11-30T11:11:25 SAST" name="softwaretestingmaterial" finished-at="2021-11-30T11:11:36 SAST" duration-ms="11032">
+  <suite started-at="2021-11-30T23:47:27 SAST" name="softwaretestingmaterial" finished-at="2021-11-30T23:47:44 SAST" duration-ms="16828">
     <groups>
     </groups>
-    <test started-at="2021-11-30T11:11:25 SAST" name="testngTest" finished-at="2021-11-30T11:11:36 SAST" duration-ms="11032">
+    <test started-at="2021-11-30T23:47:27 SAST" name="testngTest" finished-at="2021-11-30T23:47:44 SAST" duration-ms="16828">
       <class name="com.oldmutual.testCase.TestC_WebsiteTest_001">
-        <test-method is-config="true" signature="setup()[pri:0, instance:com.oldmutual.testCase.TestC_WebsiteTest_001@384ad17b]" started-at="2021-11-30T11:11:25 SAST" name="setup" finished-at="2021-11-30T11:11:27 SAST" duration-ms="2743" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.oldmutual.testCase.TestC_WebsiteTest_001@43195e57]" started-at="2021-11-30T23:47:27 SAST" name="setup" finished-at="2021-11-30T23:47:31 SAST" duration-ms="3480" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="browseToFinancePageTest()[pri:0, instance:com.oldmutual.testCase.TestC_WebsiteTest_001@384ad17b]" started-at="2021-11-30T11:11:27 SAST" name="browseToFinancePageTest" finished-at="2021-11-30T11:11:35 SAST" duration-ms="7800" status="FAIL">
+        <test-method signature="browseToFinancePageTest()[pri:0, instance:com.oldmutual.testCase.TestC_WebsiteTest_001@43195e57]" started-at="2021-11-30T23:47:31 SAST" name="browseToFinancePageTest" finished-at="2021-11-30T23:47:44 SAST" duration-ms="13267" status="FAIL">
           <exception class="org.openqa.selenium.NoSuchElementException">
             <message>
               <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"(//span[@class="om-button-icon"])[1]"}
@@ -20,8 +20,8 @@ For documentation on this error, please visit: https://www.seleniumhq.org/except
 Build info: version: '4.0.0-alpha-3', revision: '8c567de6dc'
 System info: host: 'JAVADEV', ip: '192.168.88.249', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '16.0.2'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 96.0.4664.45, chrome: {chromedriverVersion: 96.0.4664.45 (76e4c1bb2ab46..., userDataDir: C:\Users\theon\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:49732}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 52e35bbafb87650e56f5c05b022ebbfa
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 96.0.4664.45, chrome: {chromedriverVersion: 96.0.4664.45 (76e4c1bb2ab46..., userDataDir: C:\Users\theon\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:52193}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: c95a9c1820f80fe335867e7ba878dccf
 *** Element info: {Using=xpath, value=(//span[@class="om-button-icon"])[1]}]]>
             </message>
             <full-stacktrace>
@@ -31,8 +31,8 @@ For documentation on this error, please visit: https://www.seleniumhq.org/except
 Build info: version: '4.0.0-alpha-3', revision: '8c567de6dc'
 System info: host: 'JAVADEV', ip: '192.168.88.249', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '16.0.2'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 96.0.4664.45, chrome: {chromedriverVersion: 96.0.4664.45 (76e4c1bb2ab46..., userDataDir: C:\Users\theon\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:49732}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 52e35bbafb87650e56f5c05b022ebbfa
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 96.0.4664.45, chrome: {chromedriverVersion: 96.0.4664.45 (76e4c1bb2ab46..., userDataDir: C:\Users\theon\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:52193}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: c95a9c1820f80fe335867e7ba878dccf
 *** Element info: {Using=xpath, value=(//span[@class="om-button-icon"])[1]}
 at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:78)
@@ -50,7 +50,7 @@ at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver
 at org.openqa.selenium.By$ByXPath.findElement(By.java:396)
 at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:319)
 at com.oldmutual.pageObject.OmPersonalLoanPage.clickBtnCaculate(OmPersonalLoanPage.java:55)
-at com.oldmutual.testCase.TestC_WebsiteTest_001.browseToFinancePageTest(TestC_WebsiteTest_001.java:38)
+at com.oldmutual.testCase.TestC_WebsiteTest_001.browseToFinancePageTest(TestC_WebsiteTest_001.java:45)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -85,10 +85,6 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- browseToFinancePageTest -->
-        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:com.oldmutual.testCase.TestC_WebsiteTest_001@384ad17b]" started-at="2021-11-30T11:11:35 SAST" name="closeBrowser" finished-at="2021-11-30T11:11:36 SAST" duration-ms="417" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- closeBrowser -->
       </class> <!-- com.oldmutual.testCase.TestC_WebsiteTest_001 -->
     </test> <!-- testngTest -->
   </suite> <!-- softwaretestingmaterial -->

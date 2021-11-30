@@ -60,11 +60,11 @@ public class BaseClass {
 	}
 
 	// shutdown after the @test. This will run after all the tests have executed
-	@AfterClass
+	/**@AfterClass
 	public void closeBrowser() {
 
 		driver.quit();
 
-	}
+	}*/
 
 }

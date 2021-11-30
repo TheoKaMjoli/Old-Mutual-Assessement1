@@ -11,7 +11,7 @@ import org.openqa.selenium.WebDriver;
 public class Screenshot {
 	
 	
-	public static void takeSnapShot(WebDriver webdriver, String fileWithPath) throws InterruptedException, IOException {
+	public void takeSnapShot(WebDriver webdriver, String fileWithPath) throws InterruptedException, IOException {
 		
 		webdriver.wait(2000); //the screenshot will try to take the snap while the page is loading
 		TakesScreenshot screenshot = ((TakesScreenshot)webdriver);
