@@ -130,12 +130,29 @@
                   <a name="browseToFinancePageTest">
                   </a> <!-- browseToFinancePageTest -->
                   <span class="method-name">browseToFinancePageTest</span>
-                  <div class="stack-trace">java.lang.IllegalMonitorStateException: current thread is not owner
-	at java.base/java.lang.Object.wait(Native Method)
-	at com.oldmutual.utilities.Screenshot.takeSnapShot(Screenshot.java:15)
-	at com.oldmutual.testCase.TestC_WebsiteTest_001.browseToFinancePageTest(TestC_WebsiteTest_001.java:25)
+                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;(//span[@class=&quot;om-button-icon&quot;])[1]&quot;}
+  (Session info: chrome=96.0.4664.45)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;4.0.0-alpha-3&apos;, revision: &apos;8c567de6dc&apos;
+System info: host: &apos;JAVADEV&apos;, ip: &apos;192.168.88.249&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;16.0.2&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 96.0.4664.45, chrome: {chromedriverVersion: 96.0.4664.45 (76e4c1bb2ab46..., userDataDir: C:\Users\theon\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:49732}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 52e35bbafb87650e56f5c05b022ebbfa
+*** Element info: {Using=xpath, value=(//span[@class=&quot;om-button-icon&quot;])[1]}
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:191)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:125)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:161)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:576)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:327)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:445)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:396)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:319)
+	at com.oldmutual.pageObject.OmPersonalLoanPage.clickBtnCaculate(OmPersonalLoanPage.java:55)
+	at com.oldmutual.testCase.TestC_WebsiteTest_001.browseToFinancePageTest(TestC_WebsiteTest_001.java:38)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-... Removed 27 stack frames
+... Removed 32 stack frames
 </div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
@@ -197,12 +214,12 @@ data.addRows(1);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'browseToFinancePageTest')
 data.setCell(0, 2, 'com.oldmutual.testCase.TestC_WebsiteTest_001')
-data.setCell(0, 3, 9058);
+data.setCell(0, 3, 7800);
 window.suiteTableData['softwaretestingmaterial']= { tableData: data, tableDiv: 'times-div-softwaretestingmaterial'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 9 seconds</span>
+              <span class="suite-total-time">Total running time: 7 seconds</span>
               <div id="times-div-softwaretestingmaterial">
               </div> <!-- times-div-softwaretestingmaterial -->
             </div> <!-- times-div -->
@@ -237,11 +254,11 @@ return data;
                 <img src="failed.png">
                 </img>
                 <span class="method-name">browseToFinancePageTest</span>
-                <span class="method-start">4846 ms</span>
+                <span class="method-start">2765 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">closeBrowser</span>
-                <span class="method-start">13913 ms</span>
+                <span class="method-start">10575 ms</span>
               </div> <!-- configuration-class after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

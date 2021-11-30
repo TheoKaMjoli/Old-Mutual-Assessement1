@@ -15,7 +15,7 @@ public class OmPersonalLoanPage {
 			PageFactory.initElements(localDriver, this); //initialize web elements which are defined in Page Objects.
 	
 		}
-
+		
 		//click calclate button
 		private String btnCalculate(){
 			return "(//span[@class=\"om-button-icon\"])[1]";
@@ -48,7 +48,7 @@ public class OmPersonalLoanPage {
 		 
 		 //monthly repayment label
 		 private String lblLoanRepayment(){
-			 return "(//h5[@class=\"no-bottom-margin no-top-margin\"]/strong)[2]"; 
+			 return "(//h5[@class=\"no-bottom-margin no-top-margin\"]/strong)[2]";
 		 }
 		 
 		 public void clickBtnCaculate(){

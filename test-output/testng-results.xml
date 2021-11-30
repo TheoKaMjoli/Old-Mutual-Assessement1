@@ -2,25 +2,55 @@
 <testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2021-11-30T10:57:40 SAST" name="softwaretestingmaterial" finished-at="2021-11-30T10:57:54 SAST" duration-ms="14391">
+  <suite started-at="2021-11-30T11:11:25 SAST" name="softwaretestingmaterial" finished-at="2021-11-30T11:11:36 SAST" duration-ms="11032">
     <groups>
     </groups>
-    <test started-at="2021-11-30T10:57:40 SAST" name="testngTest" finished-at="2021-11-30T10:57:54 SAST" duration-ms="14391">
+    <test started-at="2021-11-30T11:11:25 SAST" name="testngTest" finished-at="2021-11-30T11:11:36 SAST" duration-ms="11032">
       <class name="com.oldmutual.testCase.TestC_WebsiteTest_001">
-        <test-method is-config="true" signature="setup()[pri:0, instance:com.oldmutual.testCase.TestC_WebsiteTest_001@384ad17b]" started-at="2021-11-30T10:57:40 SAST" name="setup" finished-at="2021-11-30T10:57:44 SAST" duration-ms="4816" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.oldmutual.testCase.TestC_WebsiteTest_001@384ad17b]" started-at="2021-11-30T11:11:25 SAST" name="setup" finished-at="2021-11-30T11:11:27 SAST" duration-ms="2743" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="browseToFinancePageTest()[pri:0, instance:com.oldmutual.testCase.TestC_WebsiteTest_001@384ad17b]" started-at="2021-11-30T10:57:44 SAST" name="browseToFinancePageTest" finished-at="2021-11-30T10:57:54 SAST" duration-ms="9058" status="FAIL">
-          <exception class="java.lang.IllegalMonitorStateException">
+        <test-method signature="browseToFinancePageTest()[pri:0, instance:com.oldmutual.testCase.TestC_WebsiteTest_001@384ad17b]" started-at="2021-11-30T11:11:27 SAST" name="browseToFinancePageTest" finished-at="2021-11-30T11:11:35 SAST" duration-ms="7800" status="FAIL">
+          <exception class="org.openqa.selenium.NoSuchElementException">
             <message>
-              <![CDATA[current thread is not owner]]>
+              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"(//span[@class="om-button-icon"])[1]"}
+  (Session info: chrome=96.0.4664.45)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '4.0.0-alpha-3', revision: '8c567de6dc'
+System info: host: 'JAVADEV', ip: '192.168.88.249', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '16.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 96.0.4664.45, chrome: {chromedriverVersion: 96.0.4664.45 (76e4c1bb2ab46..., userDataDir: C:\Users\theon\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:49732}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 52e35bbafb87650e56f5c05b022ebbfa
+*** Element info: {Using=xpath, value=(//span[@class="om-button-icon"])[1]}]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.IllegalMonitorStateException: current thread is not owner
-at java.base/java.lang.Object.wait(Native Method)
-at com.oldmutual.utilities.Screenshot.takeSnapShot(Screenshot.java:15)
-at com.oldmutual.testCase.TestC_WebsiteTest_001.browseToFinancePageTest(TestC_WebsiteTest_001.java:25)
+              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"(//span[@class="om-button-icon"])[1]"}
+  (Session info: chrome=96.0.4664.45)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '4.0.0-alpha-3', revision: '8c567de6dc'
+System info: host: 'JAVADEV', ip: '192.168.88.249', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '16.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 96.0.4664.45, chrome: {chromedriverVersion: 96.0.4664.45 (76e4c1bb2ab46..., userDataDir: C:\Users\theon\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:49732}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 52e35bbafb87650e56f5c05b022ebbfa
+*** Element info: {Using=xpath, value=(//span[@class="om-button-icon"])[1]}
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:78)
+at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:191)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:125)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:161)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:576)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:327)
+at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:445)
+at org.openqa.selenium.By$ByXPath.findElement(By.java:396)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:319)
+at com.oldmutual.pageObject.OmPersonalLoanPage.clickBtnCaculate(OmPersonalLoanPage.java:55)
+at com.oldmutual.testCase.TestC_WebsiteTest_001.browseToFinancePageTest(TestC_WebsiteTest_001.java:38)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -51,11 +81,11 @@ at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.lang.IllegalMonitorStateException -->
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- browseToFinancePageTest -->
-        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:com.oldmutual.testCase.TestC_WebsiteTest_001@384ad17b]" started-at="2021-11-30T10:57:54 SAST" name="closeBrowser" finished-at="2021-11-30T10:57:54 SAST" duration-ms="442" status="PASS">
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:com.oldmutual.testCase.TestC_WebsiteTest_001@384ad17b]" started-at="2021-11-30T11:11:35 SAST" name="closeBrowser" finished-at="2021-11-30T11:11:36 SAST" duration-ms="417" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeBrowser -->

@@ -7,10 +7,10 @@ import java.util.Properties;
 
 public class ConfigReader {
 	Properties prop;
-	
+
 	public ConfigReader() {
-		//InputStream
-		try (FileInputStream input = new FileInputStream("src/test/java/com/oldmutual/conf/config.properties")) {
+		
+		try (InputStream input = new FileInputStream("src/test/java/com/oldmutual/conf/config.properties")) {
 			 prop = new Properties();
 			 prop.load(input);
 			System.out.println("prop === > " + prop);

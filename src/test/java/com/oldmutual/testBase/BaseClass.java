@@ -3,8 +3,6 @@ import com.oldmutual.utilities.ConfigReader;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
-import java.util.concurrent.TimeUnit;
-
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
@@ -16,7 +14,7 @@ public class BaseClass {
 
 	// initialize configuration properties
 	protected ConfigReader conf = new ConfigReader();
-	private String baseUrl = conf.getHomeURL(); // "https://www.oldmutual.co.za/personal/solutions/bank-and-borrow/";
+	private String baseUrl = conf.getHomeURL();
 												// //setting the modifier on private to avoid interference by other
 												// classes.
 
@@ -34,27 +32,22 @@ public class BaseClass {
 	// This is my setup method
 	@BeforeClass // This will be executed before any @test annotated method.
 	public void setup() {
-		
-		driver = new ChromeDriver();
-		WebDriverManager.chromedriver().setup(); 
-	
 		try {
-
 			switch (conf.getBrowser()) {
 				case "chrome":
+					WebDriverManager.chromedriver().setup();
 					driver = new ChromeDriver();
-					WebDriverManager.chromedriver().setup(); 
 					break;
 				case "firefox":
-					driver = new FirefoxDriver();
 					WebDriverManager.firefoxdriver().setup();
+					driver = new FirefoxDriver();
 					break;
 				default:
-				 System.out.println(conf.getbrowserSetupLogerror());
+				 System.out.println("log error stating that the browser type entered has not been catered for");
+				 break;
 			}
-
 		} catch (Exception e) {
-			System.out.println("Swicth statement: setting up drivers"); 
+			System.out.println("Error with switch statement while setting up drivers");
 		}
 
 	}
@@ -63,9 +56,6 @@ public class BaseClass {
 	public void navigateToUrl(String url) {
 
 		driver.get(baseUrl + url);
-		driver.manage().window().maximize(); // simply maximizing the window
-		driver.manage().timeouts().implicitlyWait(500, TimeUnit.SECONDS);
-
 
 	}
 

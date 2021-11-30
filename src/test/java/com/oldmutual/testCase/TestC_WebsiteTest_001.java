@@ -1,28 +1,22 @@
 package com.oldmutual.testCase;
 
-import java.io.IOException;
-
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import com.oldmutual.pageObject.Home;
 import com.oldmutual.pageObject.OmPersonalLoanPage;
 import com.oldmutual.testBase.BaseClass;
-import com.oldmutual.utilities.Screenshot;
 
+import io.github.bonigarcia.wdm.config.Config;
 
 //We extended the baseClass to 
 public class TestC_WebsiteTest_001 extends BaseClass {
-
+	
 	
 	@Test 
-	public void browseToFinancePageTest() throws InterruptedException, IOException {
-		
-
-		Screenshot captureScreen = new Screenshot();
+	public void browseToFinancePageTest() {
 		
 		getHomeUrl(); //Browse to Old Mutual Finance web site
-		captureScreen.takeSnapShot(driver, "./Screenshot/OldMutual.png");
 		
 		Home home = new Home(driver); //Home object has one method getTitle()
 	
@@ -36,7 +30,7 @@ public class TestC_WebsiteTest_001 extends BaseClass {
 	//	omFinanceWebsite.clickButton(); //unable to click the link button
 		
 //		navigateToUrl("personal-loans/"); //concatenated the personal loan urls
-		home.btnPersonalLoans();
+		home.clickPersonalLoans();
 		
 		//Actions
 		
